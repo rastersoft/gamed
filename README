@@ -41,6 +41,11 @@ To uninstall it, just type:
 
 	sudo make uninstall
 
+LICENSE:
+
+GAMEd is distributed under the GPLv3 license. You can
+read it in the COPYING file.
+
 AUTHOR:
 
 Sergio Costas Rodriguez (Raster Software Vigo)
