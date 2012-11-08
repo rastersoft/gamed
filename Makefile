@@ -7,12 +7,14 @@ clean:
 install: gamed
 	/usr/bin/install -d /usr/local/bin
 	/usr/bin/install -d /etc/dbus-1/system.d
+	/usr/bin/install -d /etc/xdg/autostart
 	/usr/bin/install -d /usr/local/share/dbus-1/system-services
 	/usr/bin/install gamed /usr/local/bin
 	/usr/bin/install renice_gamed /usr/local/bin
 	/usr/bin/install gamed.conf /etc
 	/usr/bin/install com.rastersoft.gamed.conf /etc/dbus-1/system.d/
 	/usr/bin/install com.rastersoft.gamed.service /usr/local/share/dbus-1/system-services/
+	/usr/bin/install gamed.desktop /etc/xdg/autostart/
 
 uninstall:
 	/bin/rm /usr/local/bin/gamed
@@ -20,3 +22,4 @@ uninstall:
 	/bin/rm /etc/gamed.conf
 	/bin/rm /etc/dbus-1/system.d/com.rastersoft.gamed.conf
 	/bin/rm /usr/local/share/dbus-1/system-services/com.rastersoft.gamed.service
+	/bin/rm /etc/xdg/autostart/gamed.desktop

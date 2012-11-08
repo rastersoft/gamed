@@ -37,6 +37,17 @@ and activate it only when you want to play. Take into account
 that, sometimes, it will need some minutes to take fully
 effect, due to the way Linux manages the priorities.
 
+CONFIGURING
+
+The configuration is stored in /etc/gamed.conf. It contains
+a list of the executables to change the priority, and an
+extra line with the current priority.
+
+You can add more executables to the list, for example to
+use it with other window managers like Unity or Gnome Shell.
+
+UNINSTALLING
+
 To uninstall it, just type:
 
 	sudo make uninstall
