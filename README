@@ -1,0 +1,49 @@
+GAMEd, a daemon for setting high priority
+
+GAMEd is a little daemon, designed to allow to give high
+priority to several programs at once. This is needed because
+only ROOT can do it, so a daemon is needed to allow all users
+to change, in a safe way, the priority to some programs.
+
+The main utility is for OpenGL (3D) games. Under Linux,
+some window managers can reduce the performance of the games,
+unless high priority is given to both X server and window
+manager itself. This is the objective of GAMEd: to allow to
+automagically set the high priority each time you enter your
+session.
+
+INSTALL GAMEd
+
+Just type
+
+	make
+	sudo make install
+
+and it will be installed. Now, just set the desired priority
+(-20 is the maximum priority for a program) with the command
+
+	renice_gamed PRIORITY
+
+GAMEd will remember this value (-20 is the default, if you
+don't write a value), and will set it every time you enter
+your session.
+
+If you experience problems due to the high priority, you
+can set it again to 0 when you want with
+
+	renice_gamed 0
+
+and activate it only when you want to play. Take into account
+that, sometimes, it will need some minutes to take fully
+effect, due to the way Linux manages the priorities.
+
+To uninstall it, just type:
+
+	sudo make uninstall
+
+AUTHOR:
+
+Sergio Costas Rodriguez (Raster Software Vigo)
+raster@rastersoft.com
+http://www.rastersoft.com
+

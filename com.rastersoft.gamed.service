@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=com.rastersoft.gamed
+Exec=/usr/local/bin/gamed
+User=root

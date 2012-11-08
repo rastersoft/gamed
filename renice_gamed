@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# priority 127 means: put the currently configured priority
+my_PRIORITY=${1:-127}
+
+echo Setting priority to ${my_PRIORITY}
+
+dbus-send --type=method_call --system --dest=com.rastersoft.gamed /com/rastersoft/gamed com.rastersoft.gamed.SetPriority int32:${my_PRIORITY}
