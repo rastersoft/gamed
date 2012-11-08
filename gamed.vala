@@ -21,6 +21,9 @@ using Gee;
 public class dbus_class: Object {
 	
 	public void set_priority(int new_priority) {
+		if (priority<(-15)) {
+			priority=-15;
+		}
 		var k = new checker(new_priority);
 	}
 	
