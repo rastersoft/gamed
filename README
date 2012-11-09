@@ -52,6 +52,11 @@ extra line with the current priority.
 You can add more executables to the list, for example to
 use it with other window managers like Unity or Gnome Shell.
 
+GAMEd re-reads the configuration file each time you run
+the renice_gamed command (which uses DBus), so you can
+modify it without needing to reboot your system or
+relaunch any service.
+
 UNINSTALLING
 
 To uninstall it, just type:
