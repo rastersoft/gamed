@@ -17,6 +17,7 @@ INSTALL GAMEd
 Just type in a shell:
 
 	git clone https://github.com/rastersoft/gamed.git
+	cd gamed
 	make
 	sudo make install
 
