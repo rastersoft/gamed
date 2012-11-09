@@ -14,19 +14,24 @@ session.
 
 INSTALL GAMEd
 
-Just type
+Just type in a shell:
 
+	git clone https://github.com/rastersoft/gamed.git
 	make
 	sudo make install
 
 and it will be installed. Now, just set the desired priority
-(-20 is the maximum priority for a program) with the command
+(-15 is the maximum priority that GAMEd allows to set for a
+program; smaller values will be changed to -15) with the
+command
 
 	renice_gamed PRIORITY
 
-GAMEd will remember this value (-20 is the default, if you
+GAMEd will remember this value (-15 is the default, if you
 don't write a value), and will set it every time you enter
-your session.
+your session. Remember that a smaller value means greater
+priority, so -15 is high priority, and 20 is very low
+priority.
 
 If you experience problems due to the high priority, you
 can set it again to 0 when you want with
