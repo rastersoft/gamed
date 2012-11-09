@@ -21,9 +21,6 @@ using Gee;
 public class dbus_class: Object {
 	
 	public void set_priority(int new_priority) {
-		if (new_priority<(-15)) {
-			new_priority=-15;
-		}
 		var k = new checker(new_priority);
 	}
 	
@@ -53,7 +50,7 @@ class checker: Object {
 
 		FileInputStream file_read;
 
-		this.c_priority=-20;
+		this.c_priority=-15;
 		
 		var config_file = GLib.File.new_for_path("/etc/gamed.conf");
 		if (!config_file.query_exists (null)) {
@@ -110,6 +107,10 @@ class checker: Object {
 	public int do_check(int priority) {
 		
 		string name;
+
+		if (priority<(-15)) {
+			priority=-15;
+		}
 
 		if (priority!=this.c_priority) {
 			this.c_priority=priority;
