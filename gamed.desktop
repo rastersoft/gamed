@@ -1,0 +1,8 @@
+
+[Desktop Entry]
+Type=Application
+Exec=renice_gamed
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Sets X and Window Manager with high priority
