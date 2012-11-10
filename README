@@ -30,9 +30,14 @@ command
 
 GAMEd will remember this value (-15 is the default, if you
 don't write a value), and will set it every time you enter
-your session. Remember that a smaller value means greater
-priority, so -15 is high priority, and 20 is very low
-priority.
+your session or boot your computer (once installed and run
+this command, you don't have to re-run it again; it's launched
+automatically every time you boot your computer).
+
+Remember that a smaller value means greater priority, so -15
+is high priority, and 20 is very low priority (due to security
+and stability concerns, GAMEd doesn't allow priorities below
+-15).
 
 If you experience problems due to the high priority, you
 can set it again to 0 when you want with
