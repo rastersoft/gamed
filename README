@@ -14,7 +14,7 @@ session.
 
 INSTALL GAMEd
 
-You need Vala 0.16 or later to use GAMEd.
+You need Vala 0.16 or later to use GAMEd, and libgee.
 
 Just type in a shell:
 
@@ -23,12 +23,14 @@ Just type in a shell:
 	make
 	sudo make install
 
-and it will be installed. Now, just set the desired priority
-(-15 is the maximum priority that GAMEd allows to set for a
-program; smaller values will be changed to -15) with the
-command
+and it will be installed and launched. Now, you can set the
+desired priority (-15 is the maximum priority that GAMEd
+allows to set for a program; smaller values will be changed
+to -15) with the command
 
-	renice_gamed -15
+	renice_gamed PRIORITY
+
+being PRIORITY a value between -15 and 20.
 
 GAMEd will remember this value (-15 is the default, if you
 don't write a value), and will set it every time you enter

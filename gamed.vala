@@ -158,7 +158,7 @@ void on_bus_aquired (DBusConnection conn) {
 
 int main(string[] args) {
 
-	stdout.printf("GAMEd, version 1.1.0\n");
+	stdout.printf("GAMEd, version 1.2.0\n");
 
 	var k = new checker();
 	k = null;

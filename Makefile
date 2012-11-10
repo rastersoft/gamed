@@ -15,6 +15,7 @@ install: gamed
 	/usr/bin/install com.rastersoft.gamed.conf /etc/dbus-1/system.d/
 	/usr/bin/install com.rastersoft.gamed.service /usr/local/share/dbus-1/system-services/
 	/usr/bin/install gamed.desktop /etc/xdg/autostart/
+	./renice_gamed -15
 
 uninstall:
 	/bin/rm /usr/local/bin/gamed
